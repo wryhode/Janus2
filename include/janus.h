@@ -28,6 +28,8 @@ class Escon50Config {
         float pwm_ramp_high = 0.9;
     
     public:
+        Escon50Config(float low_rpm, float high_rpm, float low_pwm, float high_pwm) :
+            rpm_ramp_low{ low_rpm }, rpm_ramp_high{ high_rpm }, pwm_ramp_low{ low_pwm }, pwm_ramp_high{ high_pwm } {};
         float rpm_to_dutycycle(float rpm);
 };
 
