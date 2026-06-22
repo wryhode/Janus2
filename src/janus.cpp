@@ -52,7 +52,7 @@ float EsconPWMMotor::get_rpm()
 
 void EsconPWMMotor::set_enable(bool enabled)
 {
-    digitalWrite(pin_enable, enabled);
+    digitalWrite(pin_enable, enabled ? HIGH : LOW);
 }
 
 void ServoMotor::init()
