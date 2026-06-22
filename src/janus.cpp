@@ -98,7 +98,6 @@ void OpenCRDynamixelBridge::convert_dxl_to_packet(int motor_number, dynamixel_st
     p->goal[motor_number] = (s.radians / M_TWOPI) * 4095.0f;
     p->velocity[motor_number] = s.velocity / 0.229f;
     p->acceleration[motor_number] = s.acceleration / 214.577f;
-    Serial.println(p->goal[motor_number]);
 }
 
 void OpenCRDynamixelBridge::on_packet_received(const uint8_t *buffer, size_t size)
@@ -139,9 +138,6 @@ void OpenCRDynamixelBridge::send_motors()
 
 void OpenCRDynamixelBridge::id_set_state(unsigned char id, dynamixel_state d)
 {
-    Serial.print("Set state id");
-    Serial.print(id);
-    Serial.print(d.radians);
     convert_dxl_to_packet(id, d, &motor_states);
 }
 
