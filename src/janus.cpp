@@ -39,9 +39,15 @@ void EsconPWMMotor::init()
 
 void EsconPWMMotor::set_rpm(float rpm)
 {
+    target_rpm = rpm;
     unsigned int period = esc_config->rpm_to_dutycycle(abs(rpm)) * pwm_config->max_value();
     analogWrite(pin_pwm, period);
     digitalWrite(pin_direction, rpm < 0);
+}
+
+float EsconPWMMotor::get_rpm()
+{
+    return target_rpm;
 }
 
 void EsconPWMMotor::set_enable(bool enabled)

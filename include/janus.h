@@ -39,6 +39,7 @@ class VelocityMotor {
         virtual ~VelocityMotor() = default;
         virtual void init() = 0;
         virtual void set_rpm(float rpm) = 0;
+        virtual float get_rpm();
 };
 
 class EsconPWMMotor : public VelocityMotor {
@@ -48,6 +49,7 @@ class EsconPWMMotor : public VelocityMotor {
         unsigned int pin_pwm;
         Escon50Config* esc_config;
         PWMConfig* pwm_config;
+        float target_rpm;
 
     public:
         EsconPWMMotor(unsigned int p_dir, unsigned int p_ena, unsigned int p_pwm, Escon50Config* esc_conf, PWMConfig* pwm_conf) :
@@ -55,6 +57,7 @@ class EsconPWMMotor : public VelocityMotor {
         
         void init() override;
         void set_rpm(float rpm) override;
+        float get_rpm() override;
         void set_enable(bool enabled);
 };
 
