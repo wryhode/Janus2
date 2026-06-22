@@ -34,15 +34,19 @@ void EsconPWMMotor::init()
     pinMode(pin_enable, OUTPUT);
     pinMode(pin_direction, OUTPUT);
 
-    set_enable(false);
+    //set_enable(false);
 }
 
 void EsconPWMMotor::set_rpm(float rpm)
 {
     target_rpm = rpm;
-    unsigned int period = esc_config->rpm_to_dutycycle(abs(rpm)) * pwm_config->max_value();
+
+    float abs_rpm = fabsf(rpm);
+    unsigned int period = floor(esc_config->rpm_to_dutycycle(abs_rpm) * pwm_config->max_value());
+    
     Serial.print("Motor period: ");Serial.println(period);
     Serial.print("Motor direction: ");Serial.println(rpm < 0);
+
     analogWrite(pin_pwm, period);
     digitalWrite(pin_direction, rpm < 0);
 }
