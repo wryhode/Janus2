@@ -71,7 +71,7 @@ class ServoMotor : public PositionMotor{
         Servo s;
 
     public:
-        ServoMotor(unsigned int p_pwm) : pin_pwm{ p_pwm } {};
+        ServoMotor(unsigned int p_pwm, PWMConfig* pwm_cfg) : pin_pwm{ p_pwm }, pwm_config{ pwm_cfg } {};
         void init() override;
         void set_position(float radians) override;
         float get_position() override;
