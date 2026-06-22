@@ -1,9 +1,6 @@
 #include <Arduino.h>
 #include "janus.h"
 
-void setup() {};
-void loop() {};
-
 void PWMConfig::set_resolution(unsigned int depth)
 {
     bit_depth = constrain(static_cast<int>(depth), 8, 15);
