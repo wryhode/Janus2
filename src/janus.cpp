@@ -120,7 +120,7 @@ void OpenCRDynamixelBridge::update()
     
     packet_serial.update();
 
-    if (time - last_status_packet >= 100) {
+    if (time - last_status_packet >= 1000) {
         last_status_packet = time;
         send_status_packet();
     }
