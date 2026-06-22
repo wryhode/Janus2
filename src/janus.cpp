@@ -23,6 +23,11 @@ float Escon50Config::rpm_to_dutycycle(float rpm)
     return pwm_ramp_low + rpm_norm * (pwm_ramp_high - pwm_ramp_low);
 }
 
+float Escon50Config::max_rpm()
+{
+    return rpm_ramp_high;
+}
+
 void EsconPWMMotor::init()
 {
     pinMode(pin_pwm, OUTPUT);
