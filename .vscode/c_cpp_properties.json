@@ -10,6 +10,7 @@
             "includePath": [
                 "/home/wryhode/Documents/Argentum/Janus2/include",
                 "/home/wryhode/Documents/Argentum/Janus2/src",
+                "/home/wryhode/.platformio/packages/framework-arduinoteensy/libraries/Servo",
                 "/home/wryhode/Documents/Argentum/Janus2/.pio/libdeps/teensy/PacketSerial/src",
                 "/home/wryhode/.platformio/packages/framework-arduinoteensy/cores/teensy4",
                 "/home/wryhode/.platformio/packages/framework-arduinoteensy/libraries/ADC",
@@ -83,7 +84,6 @@
                 "/home/wryhode/.platformio/packages/framework-arduinoteensy/libraries/ST7735_t3/src",
                 "/home/wryhode/.platformio/packages/framework-arduinoteensy/libraries/SdFat/src",
                 "/home/wryhode/.platformio/packages/framework-arduinoteensy/libraries/SerialFlash",
-                "/home/wryhode/.platformio/packages/framework-arduinoteensy/libraries/Servo",
                 "/home/wryhode/.platformio/packages/framework-arduinoteensy/libraries/ShiftPWM",
                 "/home/wryhode/.platformio/packages/framework-arduinoteensy/libraries/Snooze/src",
                 "/home/wryhode/.platformio/packages/framework-arduinoteensy/libraries/SoftPWM",
@@ -118,6 +118,7 @@
                 "path": [
                     "/home/wryhode/Documents/Argentum/Janus2/include",
                     "/home/wryhode/Documents/Argentum/Janus2/src",
+                    "/home/wryhode/.platformio/packages/framework-arduinoteensy/libraries/Servo",
                     "/home/wryhode/Documents/Argentum/Janus2/.pio/libdeps/teensy/PacketSerial/src",
                     "/home/wryhode/.platformio/packages/framework-arduinoteensy/cores/teensy4",
                     "/home/wryhode/.platformio/packages/framework-arduinoteensy/libraries/ADC",
@@ -191,7 +192,6 @@
                     "/home/wryhode/.platformio/packages/framework-arduinoteensy/libraries/ST7735_t3/src",
                     "/home/wryhode/.platformio/packages/framework-arduinoteensy/libraries/SdFat/src",
                     "/home/wryhode/.platformio/packages/framework-arduinoteensy/libraries/SerialFlash",
-                    "/home/wryhode/.platformio/packages/framework-arduinoteensy/libraries/Servo",
                     "/home/wryhode/.platformio/packages/framework-arduinoteensy/libraries/ShiftPWM",
                     "/home/wryhode/.platformio/packages/framework-arduinoteensy/libraries/Snooze/src",
                     "/home/wryhode/.platformio/packages/framework-arduinoteensy/libraries/SoftPWM",
