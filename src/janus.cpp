@@ -43,9 +43,6 @@ void EsconPWMMotor::set_rpm(float rpm)
 
     float abs_rpm = fabsf(rpm);
     unsigned int period = floor(esc_config->rpm_to_dutycycle(abs_rpm) * pwm_config->max_value());
-    
-    Serial.print("Motor period: ");Serial.println(period);
-    Serial.print("Motor direction: ");Serial.println(rpm < 0);
 
     analogWrite(pin_pwm, period);
     digitalWrite(pin_direction, rpm < 0);
