@@ -1,0 +1,15 @@
+# Janus HAL
+*version 2*
+
+A HAL for quick, easy and safe control of different actuators. (Safety will come later :P)
+
+---
+
+## Features and documentation
+
+| Actuator                | Status          | Comment                                                          |
+| ----------------------- | --------------- | ---------------------------------------------------------------- |
+| ESCON 50/8 ESC          | Done            | Works using set_speed with custom rpm and pwm ramp settings      |
+| Microservos             | Done            | Uses the servo library under the hood. Controlled with set_angle |
+| Dynamixel OpenCR brigde | Partial support | Commands can be sent (set_angle + vel, acc). No telemetry.       |
+| Stepper motors          | Incomplete      | Plan: similar interface to servos                                |

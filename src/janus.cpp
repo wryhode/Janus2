@@ -177,3 +177,7 @@ void OpenCRDynamixelMotor::update_bridge()
     s.acceleration = acceleration;
     bridge->id_set_state(id, s);
 }
+
+// pio compilation fix dont upload this it wont do anything
+void setup() {}
+void loop() {}
